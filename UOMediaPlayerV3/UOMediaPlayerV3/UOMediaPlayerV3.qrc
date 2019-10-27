@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/UOMediaPlayerV3">
+        <file>UOMediaPlayerV3.ui</file>
+        <file>UOMediaPlayerV3.rc</file>
+    </qresource>
+</RCC>

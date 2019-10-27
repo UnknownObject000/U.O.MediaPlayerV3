@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>UOMediaPlayerV3Class</class>
+ <widget class="QMainWindow" name="UOMediaPlayerV3Class">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>557</width>
+    <height>420</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>UOMediaPlayerV3</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QOpenGLWidget" name="openGLWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>461</width>
+      <height>341</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="UIPlay">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>10</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>播放</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="UIPause">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>40</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>暂停</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="UIStop">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>70</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>停止</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="UIFastFoward">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>100</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>快进</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="UIFastReverse">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>130</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>快退</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="UISpeedUp">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>160</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>播放速度+</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="UISpeedDown">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>190</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>播放速度-</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="UIVolumeUp">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>220</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>音量+</string>
+    </property>
+   </widget>
+   <widget class="QSlider" name="horizontalSlider">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>350</y>
+      <width>411</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>350</y>
+      <width>51</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>00:00/05:14</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="UIVolumeUp_2">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>250</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>音量-</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>310</y>
+      <width>71</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>音量：85</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="UIMute">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>280</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>静音</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>340</y>
+      <width>71</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>播放速度：1.0x</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>557</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>打开</string>
+    </property>
+    <addaction name="MenuOpenVA"/>
+    <addaction name="MenuOpenImg"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>编辑</string>
+    </property>
+    <addaction name="MenuOutput"/>
+    <addaction name="MenuEdit"/>
+    <addaction name="MenuFormat"/>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>设置</string>
+    </property>
+    <addaction name="MenuPlaySettings"/>
+    <addaction name="MenuImgSettings"/>
+    <addaction name="MenuOutputSettings"/>
+   </widget>
+   <widget class="QMenu" name="menu_4">
+    <property name="title">
+     <string>关于</string>
+    </property>
+    <addaction name="MenuAbout"/>
+    <addaction name="MenuOpenSource"/>
+   </widget>
+   <widget class="QMenu" name="menu_5">
+    <property name="title">
+     <string>播放器</string>
+    </property>
+    <addaction name="MenuPlay"/>
+    <addaction name="MenuPause"/>
+    <addaction name="MenuStop"/>
+    <addaction name="MenuFF"/>
+    <addaction name="MenuFB"/>
+    <addaction name="MenuFaster"/>
+    <addaction name="MenuSlower"/>
+    <addaction name="MenuFullScreen"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+   <addaction name="menu_3"/>
+   <addaction name="menu_5"/>
+   <addaction name="menu_4"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="MenuOutput">
+   <property name="text">
+    <string>按当前配置导出</string>
+   </property>
+  </action>
+  <action name="MenuEdit">
+   <property name="text">
+    <string>调整并导出</string>
+   </property>
+  </action>
+  <action name="MenuPlaySettings">
+   <property name="text">
+    <string>播放设置</string>
+   </property>
+  </action>
+  <action name="MenuImgSettings">
+   <property name="text">
+    <string>图片浏览设置</string>
+   </property>
+  </action>
+  <action name="MenuOutputSettings">
+   <property name="text">
+    <string>音视频导出设置</string>
+   </property>
+  </action>
+  <action name="MenuFormat">
+   <property name="text">
+    <string>转换格式</string>
+   </property>
+  </action>
+  <action name="MenuAbout">
+   <property name="text">
+    <string>关于UOMediaPlayer</string>
+   </property>
+  </action>
+  <action name="MenuOpenSource">
+   <property name="text">
+    <string>开源信息</string>
+   </property>
+  </action>
+  <action name="MenuOpenVA">
+   <property name="text">
+    <string>音视频</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="MenuOpenImg">
+   <property name="text">
+    <string>图片</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+O</string>
+   </property>
+  </action>
+  <action name="MenuPlay">
+   <property name="text">
+    <string>播放</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+P</string>
+   </property>
+  </action>
+  <action name="MenuPause">
+   <property name="text">
+    <string>暂停</string>
+   </property>
+   <property name="shortcut">
+    <string>Space</string>
+   </property>
+  </action>
+  <action name="MenuStop">
+   <property name="text">
+    <string>停止</string>
+   </property>
+   <property name="shortcut">
+    <string>Esc</string>
+   </property>
+  </action>
+  <action name="MenuFF">
+   <property name="text">
+    <string>快进</string>
+   </property>
+   <property name="shortcut">
+    <string>Right</string>
+   </property>
+  </action>
+  <action name="MenuFB">
+   <property name="text">
+    <string>快退</string>
+   </property>
+   <property name="shortcut">
+    <string>Left</string>
+   </property>
+  </action>
+  <action name="MenuFaster">
+   <property name="text">
+    <string>加速播放</string>
+   </property>
+   <property name="shortcut">
+    <string>Up</string>
+   </property>
+  </action>
+  <action name="MenuSlower">
+   <property name="text">
+    <string>减速播放</string>
+   </property>
+   <property name="shortcut">
+    <string>Down</string>
+   </property>
+  </action>
+  <action name="MenuFullScreen">
+   <property name="text">
+    <string>全屏幕</string>
+   </property>
+   <property name="shortcut">
+    <string>F11</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="UOMediaPlayerV3.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>UIPlay</sender>
+   <signal>clicked()</signal>
+   <receiver>UOMediaPlayerV3Class</receiver>
+   <slot>UIClickedPlay()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>526</x>
+     <y>45</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>553</x>
+     <y>36</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>UIPause</sender>
+   <signal>clicked()</signal>
+   <receiver>UOMediaPlayerV3Class</receiver>
+   <slot>UIClickedPause()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>475</x>
+     <y>81</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>465</x>
+     <y>80</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>UIStop</sender>
+   <signal>clicked()</signal>
+   <receiver>UOMediaPlayerV3Class</receiver>
+   <slot>UIClickedStop()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>535</x>
+     <y>116</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>549</x>
+     <y>115</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>UIFastFoward</sender>
+   <signal>clicked()</signal>
+   <receiver>UOMediaPlayerV3Class</receiver>
+   <slot>UIClickedFastForward()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>536</x>
+     <y>146</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>554</x>
+     <y>146</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>UIFastReverse</sender>
+   <signal>clicked()</signal>
+   <receiver>UOMediaPlayerV3Class</receiver>
+   <slot>UIClickedFastReverse()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>523</x>
+     <y>175</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>552</x>
+     <y>180</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>UISpeedUp</sender>
+   <signal>clicked()</signal>
+   <receiver>UOMediaPlayerV3Class</receiver>
+   <slot>UIClickedSpeedUp()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>528</x>
+     <y>207</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>555</x>
+     <y>208</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>UISpeedDown</sender>
+   <signal>clicked()</signal>
+   <receiver>UOMediaPlayerV3Class</receiver>
+   <slot>UIClickedSpeedDown()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>522</x>
+     <y>231</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>555</x>
+     <y>234</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>UIVolumeUp</sender>
+   <signal>clicked()</signal>
+   <receiver>UOMediaPlayerV3Class</receiver>
+   <slot>UIClickedVolumeUp()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>518</x>
+     <y>262</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>552</x>
+     <y>265</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>UIVolumeUp_2</sender>
+   <signal>clicked()</signal>
+   <receiver>UOMediaPlayerV3Class</receiver>
+   <slot>UIClickedVolumeDown()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>517</x>
+     <y>289</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>549</x>
+     <y>293</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>UIMute</sender>
+   <signal>clicked()</signal>
+   <receiver>UOMediaPlayerV3Class</receiver>
+   <slot>UIClickedMute()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>521</x>
+     <y>320</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>553</x>
+     <y>325</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>UIClickedPlay()</slot>
+  <slot>UIClickedPause()</slot>
+  <slot>UIClickedStop()</slot>
+  <slot>UIClickedFastForward()</slot>
+  <slot>UIClickedFastReverse()</slot>
+  <slot>UIClickedVolumeUp()</slot>
+  <slot>UIClickedVolumeDown()</slot>
+  <slot>UIClickedSpeedUp()</slot>
+  <slot>UIClickedSpeedDown()</slot>
+  <slot>UIClickedMute()</slot>
+ </slots>
+</ui>

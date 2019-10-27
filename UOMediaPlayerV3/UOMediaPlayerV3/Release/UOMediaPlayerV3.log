@@ -1,0 +1,7 @@
+﻿  moc AboutDlg.h
+  AboutDlg.cpp
+  UOMediaPlayerV3.cpp
+  main.cpp
+  moc_AboutDlg.cpp
+  moc_UOMediaPlayerV3.cpp
+  UOMediaPlayerV3.vcxproj -> F:\UOMediaPlayerV3\Win32\Release\UOMediaPlayerV3.exe
